@@ -21,9 +21,14 @@ xj-100-days-of-swiftui/
 This section contains brief summaries of each project to track the concepts and techniques covered:
 
 - **Project01 - WeSplit:** Working with **forms** and **sections**, **navigation stacks**, managing program state with **@State** and **@FocusState**, creating controls like **TextField** and **Picker**, and dynamically generating views with **ForEach**.
+
 - **Project02 - GuessTheFlag:** Exploring **stacks (HStack, VStack, ZStack)** to arrange views, customizing the interface with colors, gradients, backgrounds, and frames. Adding interactivity with **Button** and **Label** views, and displaying user feedback with **Alerts**.
   
   Personal Add-ons: Dynamic effects, such as visual feedback when the user gets the answer right (e.g., green overlay) or wrong (e.g., red overlay), a timeout mechanic that progressively fades the screen from blue to black, ending the game when time runs out.
-<div align="center">
-  <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/GuessTheFlagDemo.gif" alt="GuessTheFlag Demo">
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WeSplitDemo.png" alt="WeSplit Demo" width="300">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/GuessTheFlagDemo.gif" alt="GuessTheFlag Demo" width="300">
 </div>
+
+- **Project03 - Coming Soon:**
