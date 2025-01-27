@@ -30,10 +30,15 @@ This section contains brief summaries of each project to track the concepts and 
   
   Add-ons: Real-time instant feedback to predicted sleep value by leveraging the **onChange** modifier.
 
+- **Project05 - WordScramble:** Worked with **Dynamic and styled lists**, external resources from the **app bundle**, and validating user input using **UITextChecker**. Handled critical errors using **fatalError()** for missing resources.
+
+  Add-ons: Added a Give Up mechanic to reveal all possible answers, enforced a minimum word length of 3 for valid guesses, and implemented a Reset feature to restart the game seamlessly. Dynamically generated all valid English words from the root word and provided real-time validation of guesses.
+
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WeSplitDemo.png" alt="WeSplit Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/GuessTheFlagDemo.gif" alt="GuessTheFlag Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/BetterRestDemo.gif" alt="BetterRest Demo" width="300">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WorddScrambleDemo.gif" alt="WorddScramble Demo" width="300">
 </div>
 
-- **Project05 - Coming Soon:**
+- **Project06 - Coming Soon:**
