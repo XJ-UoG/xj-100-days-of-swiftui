@@ -34,11 +34,14 @@ This section contains brief summaries of each project to track the concepts and 
 
   Add-ons: Added a Give Up mechanic to reveal all possible answers, enforced a minimum word length of 3 for valid guesses, and implemented a Reset feature to restart the game seamlessly. Dynamically generated all valid English words from the root word and provided real-time validation of guesses.
 
+- **Project06 - Animations:** Exploring implicit animations with modifiers like **.animation()** and explicit animations using the **withAnimation** block. Learned **.transition()** and custom effects for inserting and removing views.
+
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WeSplitDemo.png" alt="WeSplit Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/GuessTheFlagDemo.gif" alt="GuessTheFlag Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/BetterRestDemo.gif" alt="BetterRest Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WorddScrambleDemo.gif" alt="WorddScramble Demo" width="300">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/AnimationsDemo.gif" alt="Animations Demo" width="300">
 </div>
 
-- **Project06 - Coming Soon:**
+- **Project07 - Coming Soon:**
