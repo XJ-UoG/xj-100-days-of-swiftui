@@ -33,28 +33,65 @@ class Expenses {
             }
         }
     }
+    
+    var personalExpenses: [ExpenseItem] {
+        items.filter { $0.type == "Personal" }
+    }
+    
+    var businessExpenses: [ExpenseItem] {
+        items.filter { $0.type == "Business" }
+    }
 }
 
 struct ContentView: View {
     @State private var expenses = Expenses()
     @State private var showingAddExpense = false
     
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                if !expenses.personalExpenses.isEmpty {
+                    Section(header: Text("Personal")) {
+                        ForEach(expenses.personalExpenses) { item in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    Text(item.type)
+                                }
+                                Spacer()
+                                Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            }
                         }
-
-                        Spacer()
-                        Text(item.amount, format: .currency(code: "USD"))
+                        .onDelete { offsets in removeItems(from: expenses.personalExpenses, at: offsets) }
                     }
                 }
-                .onDelete(perform: removeItems)
+                
+                if !expenses.businessExpenses.isEmpty {
+                    Section(header: Text("Business")) {
+                        ForEach(expenses.businessExpenses) { item in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    Text(item.type)
+                                }
+                                Spacer()
+                                Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            }
+                        }
+                        .onDelete{ offsets in removeItems(from: expenses.businessExpenses, at: offsets) }
+                    }
+                }
+                
+                if expenses.items.isEmpty {
+                    ContentUnavailableView {
+                        Label("No Expenses Found", systemImage: "exclamationmark.magnifyingglass")
+                    } description: {
+                        Text("Press + to add a new expense")
+                    }
+                }
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -67,8 +104,14 @@ struct ContentView: View {
             AddView(expenses: expenses)
         }
     }
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    
+    func removeItems(from section: [ExpenseItem], at offsets: IndexSet) {
+        // Find global index from local section
+        for index in offsets {
+            if let globalIndex = expenses.items.firstIndex(where: { $0.id == section[index].id }) {
+                expenses.items.remove(at: globalIndex)
+            }
+        }
     }
 }
 
@@ -82,24 +125,23 @@ struct AddView: View {
     @State private var amount = 0.0
     
     var expenses: Expenses
-
+    
     let types = ["Business", "Personal"]
     
     @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         NavigationStack {
             Form {
                 TextField("Name", text: $name)
-
+                
                 Picker("Type", selection: $type) {
                     ForEach(types, id: \.self) {
                         Text($0)
                     }
                 }
-
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
-                    .keyboardType(.decimalPad)
+                
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
             .navigationTitle("Add new expense")
             .toolbar {
