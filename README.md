@@ -36,12 +36,17 @@ This section contains brief summaries of each project to track the concepts and 
 
 - **Project06 - Animations:** Exploring implicit animations with modifiers like **.animation()** and explicit animations using the **withAnimation** block. Learned **.transition()** and custom effects for inserting and removing views.
 
+- **Project07 - iExpense:** Persistent data storage with **UserDefaults** / **@AppStorageManaging** with **Codable** and **JSONDecoder**. **@State** with classes and the **@Observable** macro to manage data dynamically. **List**, **ForEach**, and **onDelete()** to display and manage list items interactively. Used **.sheet** and **@Environment** to present pop-up and dismiss overlays seamlessly.
+
+  Add-ons: Split expenses into separate sections (Personal & Business) with **.filtering** with proper index handling when using **.onDelete()**. Added **contentUnavailableView** to handle empty states.
+
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WeSplitDemo.png" alt="WeSplit Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/GuessTheFlagDemo.gif" alt="GuessTheFlag Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/BetterRestDemo.gif" alt="BetterRest Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WorddScrambleDemo.gif" alt="WorddScramble Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/AnimationsDemo.gif" alt="Animations Demo" width="300">
+  <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/iExpenseDemo.gif" alt="iExpense Demo" width="300">
 </div>
 
-- **Project07 - Coming Soon:**
+- **Project08 - Coming Soon:**
