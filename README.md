@@ -39,6 +39,11 @@ This section contains brief summaries of each project to track the concepts and 
 - **Project07 - iExpense:** Persistent data storage with **UserDefaults** / **@AppStorageManaging** with **Codable** and **JSONDecoder**. **@State** with classes and the **@Observable** macro to manage data dynamically. **List**, **ForEach**, and **onDelete()** to display and manage list items interactively. Used **.sheet** and **@Environment** to present pop-up and dismiss overlays seamlessly.
 
   Add-ons: Split expenses into separate sections (Personal & Business) with **.filtering** with proper index handling when using **.onDelete()**. Added **contentUnavailableView** to handle empty states.
+  
+- **Project08 - MoonShot:** Used image handling techniques like **.clipped(), .resizable(), .containerRelativeFrame()**, as well as **.scaledToFill() and .scaledToFit()** for adaptive scaling. Used **ScrollView with Lazy Stacks** to optimize performance through lazy loading. Structured navigation using **NavigationLink** and decoded **hierarchical JSON** with **generics, optionals, and nested structs**. Extended `Bundle` to streamline decoding while handling errors within the view. Applied a **custom DateFormatter** for time-based data formatting.
+
+  Add-ons: Added some animations, parallax star and space background to enhance the visual experience.
+
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WeSplitDemo.png" alt="WeSplit Demo" width="300">
@@ -46,7 +51,8 @@ This section contains brief summaries of each project to track the concepts and 
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/BetterRestDemo.gif" alt="BetterRest Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/WorddScrambleDemo.gif" alt="WorddScramble Demo" width="300">
 <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/AnimationsDemo.gif" alt="Animations Demo" width="300">
-  <img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/iExpenseDemo.gif" alt="iExpense Demo" width="300">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/iExpenseDemo.gif" alt="iExpense Demo" width="300">
+<img src="https://github.com/XJ-UoG/xj-100-days-of-swiftui/blob/main/demo/MoonShotDemo.gif" alt="iExpense Demo" width="300">
 </div>
 
-- **Project08 - Coming Soon:**
+- **Project09 - Coming Soon:**
