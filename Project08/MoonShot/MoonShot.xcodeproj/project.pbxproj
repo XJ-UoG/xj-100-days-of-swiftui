@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2693BA192D4A50F0004257B3 /* MoonShotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693BA182D4A50F0004257B3 /* MoonShotApp.swift */; };
-		2693BA1B2D4A50F0004257B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693BA1A2D4A50F0004257B3 /* ContentView.swift */; };
+		2693BA1B2D4A50F0004257B3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693BA1A2D4A50F0004257B3 /* HomeView.swift */; };
 		2693BA1D2D4A50F1004257B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2693BA1C2D4A50F1004257B3 /* Assets.xcassets */; };
 		2693BA202D4A50F1004257B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2693BA1F2D4A50F1004257B3 /* Preview Assets.xcassets */; };
 		2693BA282D4B6E69004257B3 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2693BA262D4B6E69004257B3 /* astronauts.json */; };
 		2693BA292D4B6E69004257B3 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2693BA272D4B6E69004257B3 /* missions.json */; };
+		2693BA2D2D4BB9D1004257B3 /* ParallaxStarsEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693BA2C2D4BB9D1004257B3 /* ParallaxStarsEffect.swift */; };
+		2693BA2F2D4BBB13004257B3 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693BA2E2D4BBB13004257B3 /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2693BA152D4A50F0004257B3 /* MoonShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2693BA182D4A50F0004257B3 /* MoonShotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonShotApp.swift; sourceTree = "<group>"; };
-		2693BA1A2D4A50F0004257B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2693BA1A2D4A50F0004257B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2693BA1C2D4A50F1004257B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2693BA1F2D4A50F1004257B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2693BA262D4B6E69004257B3 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		2693BA272D4B6E69004257B3 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		2693BA2C2D4BB9D1004257B3 /* ParallaxStarsEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxStarsEffect.swift; sourceTree = "<group>"; };
+		2693BA2E2D4BBB13004257B3 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 				2693BA262D4B6E69004257B3 /* astronauts.json */,
 				2693BA272D4B6E69004257B3 /* missions.json */,
 				2693BA182D4A50F0004257B3 /* MoonShotApp.swift */,
-				2693BA1A2D4A50F0004257B3 /* ContentView.swift */,
+				2693BA1A2D4A50F0004257B3 /* HomeView.swift */,
+				2693BA2E2D4BBB13004257B3 /* MissionView.swift */,
+				2693BA2C2D4BB9D1004257B3 /* ParallaxStarsEffect.swift */,
 				2693BA1C2D4A50F1004257B3 /* Assets.xcassets */,
 				2693BA1E2D4A50F1004257B3 /* Preview Content */,
 			);
@@ -145,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2693BA1B2D4A50F0004257B3 /* ContentView.swift in Sources */,
+				2693BA2D2D4BB9D1004257B3 /* ParallaxStarsEffect.swift in Sources */,
+				2693BA2F2D4BBB13004257B3 /* MissionView.swift in Sources */,
+				2693BA1B2D4A50F0004257B3 /* HomeView.swift in Sources */,
 				2693BA192D4A50F0004257B3 /* MoonShotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
