@@ -2,8 +2,6 @@
 //  HapticEngine.swift
 //  CupcakeCorner
 //
-//  Created by Tan Xin Jie on 31/1/25.
-//
 
 import SwiftUI
 
