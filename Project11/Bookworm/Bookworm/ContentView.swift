@@ -25,47 +25,26 @@ class Book {
     }
 }
 
-struct ContentView: View {@State private var title = ""
-    @State private var author = ""
-    @State private var rating = 3
-    @State private var genre = "Fantasy"
-    @State private var review = ""
-    
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
-    
+struct ContentView: View {
     @Environment(\.modelContext) var modelContext
+    @Query var books: [Book]
+    
+    @State private var showingAddScreen = false
     
     var body: some View {
         NavigationStack {
-            Form {
-                Section {
-                    TextField("Name of book", text: $title)
-                    TextField("Author's name", text: $author)
-
-                    Picker("Genre", selection: $genre) {
-                        ForEach(genres, id: \.self) {
-                            Text($0)
+            Text("Count: \(books.count)")
+                .navigationTitle("Bookworm")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add Book", systemImage: "plus") {
+                            showingAddScreen.toggle()
                         }
                     }
                 }
-
-                Section("Write a review") {
-                    TextEditor(text: $review)
-
-                    Picker("Rating", selection: $rating) {
-                        ForEach(0..<6) {
-                            Text(String($0))
-                        }
-                    }
+                .sheet(isPresented: $showingAddScreen) {
+                    AddBookView()
                 }
-
-                Section {
-                    Button("Save") {
-                        // add the book
-                    }
-                }
-            }
-            .navigationTitle("Add Book")
         }
     }
 }
