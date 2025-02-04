@@ -13,7 +13,7 @@ struct SDIntroductionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: User.self)
         }
-        .modelContainer(for: User.self)
     }
 }

@@ -57,13 +57,13 @@
 		268F94802D51E2F3009586C4 /* SDIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				26A357EF2D5213A900B1842A /* Models.swift */,
+				26A357ED2D52125900B1842A /* UsersView.swift */,
 				268F948F2D51E385009586C4 /* EditUserView.swift */,
-				268F94812D51E2F3009586C4 /* SDIntroductionApp.swift */,
 				268F94832D51E2F3009586C4 /* ContentView.swift */,
+				268F94812D51E2F3009586C4 /* SDIntroductionApp.swift */,
 				268F94852D51E2F4009586C4 /* Assets.xcassets */,
 				268F94872D51E2F4009586C4 /* Preview Content */,
-				26A357ED2D52125900B1842A /* UsersView.swift */,
-				26A357EF2D5213A900B1842A /* Models.swift */,
 			);
 			path = SDIntroduction;
 			sourceTree = "<group>";
