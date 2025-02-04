@@ -26,10 +26,14 @@ class Book {
 }
 
 struct ContentView: View {
-    @Environment(\.modelContext) var modelContext
-    @Query var books: [Book]
+    @Query(sort: [
+        SortDescriptor(\Book.title),
+        SortDescriptor(\Book.author)
+    ]) var books: [Book]
     
     @State private var showingAddScreen = false
+    
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         NavigationStack {
@@ -52,6 +56,7 @@ struct ContentView: View {
                         DetailView(book: book)
                     }
                 }
+                .onDelete(perform: deleteBooks)
             }
             .navigationTitle("Bookworm")
             .toolbar {
@@ -60,10 +65,21 @@ struct ContentView: View {
                         showingAddScreen.toggle()
                     }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
             }
             .sheet(isPresented: $showingAddScreen) {
                 AddBookView()
             }
+        }
+    }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+
+            modelContext.delete(book)
         }
     }
 }
