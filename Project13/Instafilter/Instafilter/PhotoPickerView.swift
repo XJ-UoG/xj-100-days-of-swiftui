@@ -10,11 +10,15 @@ import SwiftUI
 import PhotosUI
 import SwiftUI
 
+import StoreKit
+
 struct PhotoPickerView: View {
     @State private var pickerItem: PhotosPickerItem?
     @State private var pickerItems = [PhotosPickerItem]()
     @State private var selectedImage: Image?
     @State private var selectedImages = [Image]()
+    
+    @Environment(\.requestReview) var requestReview
     
     var body: some View {
         VStack {
@@ -54,6 +58,9 @@ struct PhotoPickerView: View {
                     }
                 }
             }
+        }
+        Button("Leave a review") {
+            requestReview()
         }
     }
 }
