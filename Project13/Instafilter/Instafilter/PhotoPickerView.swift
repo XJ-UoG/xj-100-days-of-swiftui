@@ -1,0 +1,55 @@
+//
+//  PhotoPickerView.swift
+//  Instafilter
+//
+//  Created by Tan Xin Jie on 5/2/25.
+//
+
+import SwiftUI
+
+import PhotosUI
+import SwiftUI
+
+struct PhotoPickerView: View {
+    @State private var pickerItem: PhotosPickerItem?
+    @State private var pickerItems = [PhotosPickerItem]()
+    @State private var selectedImage: Image?
+    @State private var selectedImages = [Image]()
+    
+    var body: some View {
+        VStack {
+            PhotosPicker("Select a picture", selection: $pickerItem, matching: .images)
+            selectedImage?
+                .resizable()
+                .scaledToFit()
+            PhotosPicker("Select images", selection: $pickerItems, maxSelectionCount: 3, matching: .images)
+            ScrollView {
+                ForEach(0..<selectedImages.count, id: \.self) { i in
+                    selectedImages[i]
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
+        }
+        .onChange(of: pickerItem) {
+            Task {
+                selectedImage = try await pickerItem?.loadTransferable(type: Image.self)
+            }
+        }
+        .onChange(of: pickerItems) {
+            Task {
+                selectedImages.removeAll()
+
+                for item in pickerItems {
+                    if let loadedImage = try await item.loadTransferable(type: Image.self) {
+                        selectedImages.append(loadedImage)
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    PhotoPickerView()
+}
