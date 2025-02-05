@@ -30,6 +30,14 @@ struct PhotoPickerView: View {
                         .scaledToFit()
                 }
             }
+            if let selectedImage {
+                ShareLink(item: selectedImage, preview: SharePreview("My Picture", image: selectedImage)) {
+                    Label("Click to share", systemImage: "airplane")
+                }
+            }
+            ShareLink(item: URL(string: "https://www.hackingwithswift.com")!) {
+                Label("Spread the word about Swift", systemImage: "swift")
+            }
         }
         .onChange(of: pickerItem) {
             Task {
