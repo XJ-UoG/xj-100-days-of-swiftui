@@ -55,9 +55,9 @@
 			children = (
 				26B162C52D538FB3002FF729 /* InstafilterApp.swift */,
 				26B162C72D538FB3002FF729 /* ContentView.swift */,
+				26B162D32D53A1BE002FF729 /* PhotoPickerView.swift */,
 				26B162C92D538FB4002FF729 /* Assets.xcassets */,
 				26B162CB2D538FB4002FF729 /* Preview Content */,
-				26B162D32D53A1BE002FF729 /* PhotoPickerView.swift */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
